@@ -88,4 +88,15 @@ List of Usable functions in this package (More details documented in the MATLAB 
 
   paramList is to be an array containing the current state of their joint variables.
 
+### velocityJacobian
+- **Jv = velocityJacobian(linkList):**
+
+  Returns the velocity jacobian of the manipulator given an array of links created by the **createLink** function.
+  
+### dhInvKine
+- **[paramList, error] = dhInvKine (linkList, desTransform, paramListGuess):**
+
+  Returns the parameter list necessary to achieve a desired homogenous transform and the residual error in that transform.
+  
+  linkList – a list of the joint parameters created by createLink
 
