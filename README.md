@@ -99,4 +99,23 @@ List of Usable functions in this package (More details documented in the MATLAB 
   Returns the parameter list necessary to achieve a desired homogenous transform and the residual error in that transform.
   
   linkList – a list of the joint parameters created by createLink
+  
+### newtonEuler
+- **[jointTorques, Jv, JvDot] = newtonEuler(linkList, paramList, paramListDot, paramListDDot, baseDynamics, endEffectorWrench, gravityDirection):**
+
+  Computes the inverse dynamics of a serial link manipulator and provides the velocity jacobian and its rate of change.
+  
+  linkList – a list of the joint parameters created by createLink
+  
+  paramList – the current joint angles/distances
+
+  paramListDot – the current joint angle/distance speeds
+
+  paramListDDot – the current joint angle/distance accelerations
+  
+  baseDynamics – the angular velocity and acceleration of the base frame expressed in the base frame
+  
+  endEffectorWrench – the externally applied force and torque on the last frame expressed in the last frame.
+  
+  gravityDirection – the direction of gravity expressed in the base frame
 
